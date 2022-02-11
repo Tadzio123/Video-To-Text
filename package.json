@@ -1,0 +1,14 @@
+{
+  "name": "video-to-text",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "author": "Carexo",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.3.0"
+  }
+}

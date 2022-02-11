@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: sans-serif;
+}
+
+form {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 16rem;
+  width: 25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  font-size: 1.25rem;
+}
+
+.input-group input {
+  margin-top: 0.3rem;
+  padding: 0.25rem;
+  border: none;
+
+  border-bottom: 2px solid #d3394c;
+}
+
+.input-group label {
+  font-size: 1.15rem;
+  color: rgb(70, 9, 9);
+}
+
+.submit-btn {
+  padding: 0.625rem 1.25rem;
+  background-color: transparent;
+  font-weight: 700;
+  border: none;
+  background-color: #d3394c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #d3394c;
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-weight: 700;
+  background-color: white;
+  color: white;
+
+  border: 1px solid #d3394c;
+  display: flex;
+
+  cursor: pointer;
+}
+
+.inputfile + label span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow-y: scroll;
+  white-space: nowrap;
+
+  color: #d3394c;
+}
+
+.inputfile + label strong {
+  padding: 0.625rem 1.25rem;
+  width: 50%;
+  height: 100%;
+  color: #f1e5e6;
+  background-color: #d3394c;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  border: 1px solid #9c333f;
+}
+
+.inputfile + label:hover strong,
+.inputfile:focus + label strong {
+  background-color: #9c333f;
+}
+
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.transcription {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.match {
+  color: green;
+}
+
+@media only screen and (max-width: 410px) {
+  form {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .inputfile + label {
+    flex-direction: column;
+  }
+
+  .inputfile + label span {
+    height: 3rem;
+  }
+
+  .inputfile + label strong {
+    width: auto;
+  }
+}
